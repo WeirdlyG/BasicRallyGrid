@@ -26,9 +26,6 @@ Ext.define('CustomApp', {
     // Load an Iteration combo box
     _loadIterations: function() {
         this.iterComboBox = Ext.create('Rally.ui.combobox.IterationComboBox', {
-            fieldLabel: 'Iteration',
-            labelAlign: 'right',
-            width: 400,
             listeners: {
               ready: function(combobox) {
                 this._loadSeverities();
@@ -48,8 +45,6 @@ Ext.define('CustomApp', {
         this.severityComboBox = Ext.create('Rally.ui.combobox.FieldValueComboBox', {
             model: 'Defect',
             field: 'Severity',
-            fieldLabel: 'Severity',
-            labelAlign: 'right',
             listeners: {
               ready: function(combobox) {
                 this._loadData();
